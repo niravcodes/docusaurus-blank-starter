@@ -15,9 +15,9 @@ template instead of the official starter template.
 
 ## Major changes to the starter
 
-- Simplified or removed most of introductory artefact, removed Blog feature, simplified the homepage
+- Simplified or removed most introductory artefact, removed the Blog feature, and simplified the homepage
 - Preinstalled Mermaid for diagramming and Katex for Math notation
-- Favicon, and other images are now simple and non-dinosaur-including (nothing against dinosaurs in general,
+- The favicon, and all other images are now simple and non-dinosaur-including (nothing against dinosaurs in general,
   but cute green dinosaurs don't say "cool").
 - a `simpleConfig` object in `docusaurus.config.ts` centralizes most things you'd want to change in a
   new doc site without having to parse the entire config
@@ -70,3 +70,43 @@ template instead of the official starter template.
    a. Remove the line `routeBasePath: "/",` from the `docs` preset config in `docusaurus.config.ts`.
 
    b. Rename `src/pages/somepage.tsx` to `src/pages/index.tsx` and write your homepage in React.
+
+## Additional things not included by default
+
+### TypeScript documentation with TypeDoc
+
+If you are documenting a TypeScript project, you can use Typedoc to have code-reference style docs generated from
+the code and the comments, on top of all the hand-written text.
+
+To set that up, use [docusaurus-plugin-typedoc] like so:
+
+```bash
+npm install typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev
+```
+
+```typescript title="docusaurus.config.ts"
+module.exports = {
+  // Add option types
+  // ...
+
+  plugins: [
+    [
+      "docusaurus-plugin-typedoc",
+
+      // Options
+      {
+        entryPoints: ["../src/index.ts"],
+        tsconfig: "../tsconfig.json",
+      },
+    ],
+
+    // ...
+  ],
+};
+```
+
+[docusaurus-plugin-typedoc]: https://typedoc-plugin-markdown.org/plugins/docusaurus
+
+### Other resources:
+
+[https://docusaurus.io/community/resources](https://docusaurus.io/community/resources)

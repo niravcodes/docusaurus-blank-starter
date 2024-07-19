@@ -66,3 +66,43 @@ template instead of the official starter template.
    a. Remove the line `routeBasePath: "/",` from the `docs` preset config in `docusaurus.config.ts`.
 
    b. Rename `src/pages/somepage.tsx` to `src/pages/index.tsx` and write your homepage in React.
+
+## Additional things not included by default
+
+### TypeScript documentation with TypeDoc
+
+If you are documenting a TypeScript project, you can use Typedoc to have code-reference style docs generated from
+the code and the comments, on top of all the hand-written text.
+
+To set that up, use [docusaurus-plugin-typedoc] like so:
+
+```bash
+npm install typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev
+```
+
+```typescript title="docusaurus.config.ts"
+module.exports = {
+  // Add option types
+  // ...
+
+  plugins: [
+    [
+      "docusaurus-plugin-typedoc",
+
+      // Options
+      {
+        entryPoints: ["../src/index.ts"],
+        tsconfig: "../tsconfig.json",
+      },
+    ],
+
+    // ...
+  ],
+};
+```
+
+[docusaurus-plugin-typedoc]: https://typedoc-plugin-markdown.org/plugins/docusaurus
+
+### Other resources:
+
+[https://docusaurus.io/community/resources](https://docusaurus.io/community/resources)
