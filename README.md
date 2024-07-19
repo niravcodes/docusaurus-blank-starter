@@ -11,9 +11,9 @@ template instead of the official starter template.
 
 ## Major changes to the starter
 
-- Simplified or removed most of introductory artefact, removed Blog feature, simplified the homepage
+- Simplified or removed most introductory artefact, removed the Blog feature, and simplified the homepage
 - Preinstalled Mermaid for diagramming and Katex for Math notation
-- Favicon, and other images are now simple and non-dinosaur-including (nothing against dinosaurs in general,
+- The favicon, and all other images are now simple and non-dinosaur-including (nothing against dinosaurs in general,
   but cute green dinosaurs don't say "cool").
 - a `simpleConfig` object in `docusaurus.config.ts` centralizes most things you'd want to change in a
   new doc site without having to parse the entire config
