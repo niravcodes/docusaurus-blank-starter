@@ -89,7 +89,7 @@ const config: Config = {
       style: "light",
       copyright: `Copyright © ${new Date().getFullYear()} ${
         simpleConfig.title
-      }.`,
+      }`,
     },
     prism: {
       theme: prismThemes.github,
