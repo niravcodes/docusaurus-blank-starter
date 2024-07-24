@@ -9,6 +9,12 @@ But I hope to place a copy of Docusaurus in every project I have, by default. An
 through the desolate process of de-dummifying a new doc everytime. I plan to use this blank
 template instead of the official starter template.
 
+Get started quick with:
+
+```bash
+npx create-docusaurus@latest -g copy doc-for-x https://github.com/niravcodes/docusaurus-blank-starter
+```
+
 ## Major changes to the starter
 
 - Simplified or removed most introductory artefact, removed the Blog feature, and simplified the homepage
